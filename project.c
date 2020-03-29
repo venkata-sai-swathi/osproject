@@ -1,4 +1,8 @@
-//LRTF.c project 
+/*LRTF.c
+question number : 12
+regrstration number :11805316
+section :k18uw
+*/
 
 #include<stdio.h>
 struct stu
@@ -26,7 +30,7 @@ struct stu d[20];
    char e;
    do
     {
-  printf("Can you please enter the Number of students that you wants to eat in mess?:");
+  printf("number of students take to  in mess?:");
   scanf("%d",&n);
 scheduling(d,n);
  show(d,n);
