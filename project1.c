@@ -24,7 +24,7 @@ int main()
 {
     struct stu d[20];
     int n;
-      int m;
+      int s;
     char o;
     do
 	{
@@ -43,33 +43,33 @@ int main()
 
 void agree(struct stu list[80], int k)
 {
-    int m;
-    for (m = 0; m < k; m++)
+    int s;
+    for (s = 0; s < k; s++)
     {
-        printf("\n\nEnter data for Student #%d", m + 1);
+        printf("\n\nEnter data for Student #%d", s + 1);
         
         printf("\nEnter Student id : ");
-        scanf("%d", &list[m].StuId);
+        scanf("%d", &list[s].StuId);
 
         printf("Enter time taken for food (minuts): ");
-        scanf("%d", &list[m].FTT);
+        scanf("%d", &list[s].FTT);
     } 
 }
 
 void show(struct stu list[80], int k)
 {
-    int m,AWT=0,ATAT=0;
+    int s,AWT=0,ATAT=0;
 	int TWT=0,TTAT=0;
     printf("\n\n\n\t\t\t\tOutput according to LRTF\n");
     printf("\n\n\t\t\t\t|****************************************|");
     printf("\n\n\t\t\t\t|Student id\tFoodTakenTime\tWaitingTime\tTurnAroundTime  |");
     printf("\n\t\t\t|*************************************************|");    
-    for (m = 0; m < k; m++)
+    for (s = 0; s < k; s++)
     {
-        printf("\n\t\t\t|%d\t\t%d\t\t%d\t\t%d\t\t|", list[m].StuId, list[m].FTT,list[m].WT,list[m].TAT);
+        printf("\n\t\t\t|%d\t\t%d\t\t%d\t\t%d\t\t|", list[s].StuId, list[s].FTT,list[s].WT,list[s].TAT);
         printf("\a\n\t\t\t|---------------------------------------------------------------|");
-		TWT= TWT+list[m].WT;
-		TTAT= TTAT+list[m].TAT;
+		TWT= TWT+list[s].WT;
+		TTAT= TTAT+list[s].TAT;
 	} 
 	printf("\n\n\t\n\t\t\tTotal Waiting Time is: = %d",TWT);
 	printf("\n\n\t\t\t\tTotal Turn around Time is: = %d\n\n",TTAT);
@@ -79,12 +79,12 @@ void show(struct stu list[80], int k)
 
 void schedule(struct stu list[80], int k)
 {
-    int m, q;
+    int s, q;
     struct stu t;//temperary variable t
     
-    for (m = 0; m < k - 1; m++)
+    for (s = 0; s < k - 1; s++)
     {
-        for (q = 0; q < (k - 1-m); q++)
+        for (q = 0; q < (k - 1-s); q++)
         {
             if (list[q].FTT < list[q + 1].FTT)
             {
